@@ -14,7 +14,7 @@ const Currentweather = () => {
     const [cityname, setCityname] = useState("");
     const [weatherdata, setweatherdata] = useState(null);
     const [imagefill, setImgfill] = useState(null);
-    const API_key = "d14242ee3c4f97f26fda84e4f73d1df1";
+    const API_key = "write your api key";
 
     //get weather data function
     const getWeatherdata = async () => {
