@@ -14,7 +14,8 @@ const Currentweather = () => {
     const [cityname, setCityname] = useState("");
     const [weatherdata, setweatherdata] = useState(null);
     const [imagefill, setImgfill] = useState(null);
-    const API_key = "write your api key";
+    const my_API_key = import.meta.env.VITE_API_key_Private;
+
 
     //get weather data function
     const getWeatherdata = async () => {
@@ -25,7 +26,7 @@ const Currentweather = () => {
         }
 
         try {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${API_key}`);
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${my_API_key}`);
 
             const data = await response.json();
             setweatherdata(data);
